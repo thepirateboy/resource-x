@@ -37,7 +37,7 @@ export default class PackagesList extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:5000/packages/")
+      .get("http://3.16.123.62:5000/packages/")
       .then((response) => {
         this.setState({ packages: response.data });
       })
@@ -47,7 +47,7 @@ export default class PackagesList extends Component {
   }
 
   deletePackage(id) {
-    axios.delete("http://localhost:5000/packages/" + id).then((response) => {
+    axios.delete("http://3.16.123.62:5000/packages/" + id).then((response) => {
       console.log(response.data);
     });
 

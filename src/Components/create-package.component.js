@@ -33,7 +33,7 @@ export default class CreatePackage extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:5000/users/")
+      .get("http://3.16.123.62:5000/users/")
       .then((response) => {
         if (response.data.length > 0) {
           this.setState({
@@ -112,7 +112,7 @@ export default class CreatePackage extends Component {
     console.log(thPackage);
 
     axios
-      .post("http://localhost:5000/packages/add", thPackage)
+      .post("http://3.16.123.62:5000/packages/add", thPackage)
       .then((res) => console.log(res.data));
 
     window.location = "/";
@@ -120,7 +120,7 @@ export default class CreatePackage extends Component {
 
   render() {
     return (
-      <div className="ms-3 mb-5">
+      <div className="ms-5 mb-5">
         <h3 className="mb-5">Create New Package Record</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group row mb-4">

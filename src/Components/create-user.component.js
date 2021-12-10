@@ -45,7 +45,7 @@ export default class CreateUser extends Component {
     console.log(user);
 
     axios
-      .post("http://localhost:5000/users/add/", user)
+      .post("http://3.16.123.62:5000/users/add/", user)
       .then((res) => console.log(res.data))
       .catch((err) => console.log(err));
 
@@ -58,7 +58,7 @@ export default class CreateUser extends Component {
 
   render() {
     return (
-      <div className="ms-3">
+      <div className="ms-5">
         <h3 className="mb-5">Create New User</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group row mb-4">
